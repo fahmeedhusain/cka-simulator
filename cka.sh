@@ -1,4 +1,3 @@
-cat << 'EOF' > cka
 #!/usr/bin/env bash
 # ==============================================================================
 # CKA Exam Simulator CLI - Final Kubeadm Edition (Interactive + CLI)
@@ -1280,7 +1279,6 @@ run_grade_all() {
 # 6. INTERACTIVE MODE
 # ==============================================================================
 interactive_mode() {
-  # Check if baseline exists; warn but don't strictly enforce failure here to let users explore.
   if [[ ! -f "$BASELINE_FILE" ]]; then
     echo -e "${YELLOW}Warning: No baseline file found at $BASELINE_FILE.${NC}"
     echo -e "It is highly recommended to run '${BOLD}cka baseline${NC}' first to allow clean resets.\n"
@@ -1394,5 +1392,3 @@ case "$ACTION" in
     exit 1
     ;;
 esac
-EOF
-chmod +x cka
